@@ -15,10 +15,8 @@ define('WEB', 1);
 /* * * define the site path ** */
 $site_path = realpath(dirname(__FILE__));
 define('__SITE_PATH', $site_path);
-define('READ_ONLY', 'http://pets.localhost');
-define('TEMPLATE_URL', 'http://pets.localhost/views');
-define('LOGS_URL', $site_path . '/system_logs');
-
+define('READ_ONLY', 'http://law.localhost');
+define('TEMPLATE_URL', 'http://law.localhost/views');
 
 /* * * include the init.php file ** */
 include 'includes/init.php';

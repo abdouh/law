@@ -24,8 +24,8 @@
 
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700,300);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
-@import url('css/animate.css');
-@import url('css/font-awesome.min.css');
+@import url('animate.css');
+@import url('font-awesome.min.css');
 
 /* ==========================================================================
  Global Styles
@@ -406,7 +406,7 @@ section#slider .continer {}
 .skill-bar .progress .progress-bar { min-width:10%;}
 
 .skill-bar .progress .bar {
-	background: url(images/progress-bar.png ) repeat-x scroll 0 0 #D4688F;
+	background: url(../images/progress-bar.png ) repeat-x scroll 0 0 #D4688F;
 	border-radius: 30px;
 }
 
@@ -567,7 +567,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #case-resolving {
-	background: url(images/case-resolving.jpg) no-repeat;
+	background: url(../images/case-resolving.jpg) no-repeat;
 }
 
 #case-resolving:before {
@@ -654,7 +654,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #achievement {
-	background: url(images/achievement.jpg) no-repeat;
+	background: url(../images/achievement.jpg) no-repeat;
 }
 
  #achievement:before {
@@ -899,7 +899,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #testimonial {
-	background:url(images/testimonial.jpg) no-repeat;
+	background:url(../images/testimonial.jpg) no-repeat;
 }
 
  #testimonial:before {
@@ -923,7 +923,7 @@ section#slider .continer {}
 #testimonial-carousel .item .client-message p {
 	font-size: 16px;
 	font-family: 'Merriweather Sans';
-	background: url(images/quote.png) no-repeat scroll 	top 0px	left 0px;
+	background: url(../images/quote.png) no-repeat scroll 	top 0px	left 0px;
 }
 
 #testimonial-carousel .item .client-message h4 {
@@ -937,7 +937,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #how-to-reach-us {
-	background:url(images/contact.jpg) no-repeat;	
+	background:url(../images/contact.jpg) no-repeat;	
 }
 
 #how-to-reach-us:before {
@@ -1209,7 +1209,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 	right: 20px;
 	height: 38px;  /* Height of image */
 	width: 38px; /* Width of image */
-	background: url(images/top.png) no-repeat;
+	background: url(../images/top.png) no-repeat;
 	text-indent:-99999px;
 }
 
@@ -1261,7 +1261,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 
 .blog-list{
-	background:#101111 url(../images/bg/slider-bg.jpg) no-repeat fixed top center;
+	background:#101111 url(../../images/bg/slider-bg.jpg) no-repeat fixed top center;
 	position: relative;
 	height:460px;
 }
@@ -1366,7 +1366,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 
 .search input[type="submit"] {
-	background: url(images/search.png) no-repeat scroll 0 0 / 100% 100%;
+	background: url(../images/search.png) no-repeat scroll 0 0 / 100% 100%;
 	width: 30px;
 	height: 30px;
 	border: none;

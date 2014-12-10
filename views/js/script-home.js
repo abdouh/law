@@ -41,23 +41,8 @@ jQuery(function ($) {
     map.setContextMenu({
         control: 'map',
         options: [{
-            title: 'Add marker',
-            name: 'add_marker',
-            action: function(e){
-                console.log(e.latLng.lat());
-                console.log(e.latLng.lng());
-                this.addMarker({
-                    lat: e.latLng.lat(),
-                    lng: e.latLng.lng(),
-                    title: 'New marker'
-                });
-            }
-        }, {
-            title: 'Center here',
-            name: 'center_here',
-            action: function(e){
-                this.setCenter(e.latLng.lat(), e.latLng.lng());
-            }
+            title: '211 W Upper Wacker Dr Chicago, IL 60606 USA',
+            name: '211 W Upper Wacker Dr Chicago, IL 60606 USA'
         }]
     });
     var address = "211 W Upper Wacker Dr Chicago, IL 60606 USA";
