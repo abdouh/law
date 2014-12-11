@@ -14,7 +14,7 @@
                             <div class="h-default-themed">
                                 <label>Environmental Law</label>
                                 <div class="progress">
-                                    <div class="bar progress-bar">78%</div>
+                                    <div class="bar progress-bar">50%</div>
                                 </div>
 
                                 <label>insurance defence</label>
@@ -31,6 +31,7 @@
                                 <div class="progress">
                                     <div class="bar progress-bar">78%</div>
                                 </div>
+
                             </div>
                         </div>
                     </div><!-- skill-bar -->

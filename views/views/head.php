@@ -1,7 +1,7 @@
 <head>
     <title>Romaker | Law Firm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="<?= TEMPLATE_URL; ?>/images/favicon.png">
     <!-- Bootstrap -->
     <link href="<?= TEMPLATE_URL; ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- Main CSS -->

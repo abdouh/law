@@ -36,7 +36,13 @@ jQuery(function ($) {
         streetViewControl: true,
         mapTypeControl: false,
         overviewMapControl: false,
-        clickable: true,
+        clickable: false,
+        click: function(){
+            if (isInfoWindowOpen(map.markers[0].infoWindow)){
+            } else {
+            (map.markers[0].infoWindow).open(map.map, map.markers[0]);
+            }
+        }
     });
     var address = "211 W Upper Wacker Dr Chicago, IL 60606 USA";
     GMaps.geocode({
@@ -54,7 +60,7 @@ jQuery(function ($) {
     map.addMarker({
         lat: 41.886489,
         lng: -87.63458789999999,
-        icon: image,
+        //icon: image,
         clickable: true,
         click: function (e) {
             alert('here');
@@ -77,58 +83,62 @@ jQuery(function ($) {
     });
 
     (map.markers[0].infoWindow).open(map.map, map.markers[0]);
-
+    
+    function isInfoWindowOpen(infoWindow){
+        var map = infoWindow.getMap();
+        return (map !== null && typeof map !== "undefined");
+    }
 
     var styles = [
+    {
+        "featureType": "road",
+        "stylers": [
         {
-            "featureType": "road",
-            "stylers": [
-                {
-                    "color": "#ffffff"
-                }
-            ]
-        }, {
-            "featureType": "water",
-            "stylers": [
-                {
-                    "color": "#99b3cc"
-                }
-            ]
-        }, {
-            "featureType": "landscape",
-            "stylers": [
-                {
-                    "color": "#f2efe9"
-                }
-            ]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#d3cfcf"
-                }
-            ]
-        }, {
-            "featureType": "poi",
-            "stylers": [
-                {
-                    "color": "#ded2ac"
-                }
-            ]
-        }, {
-            "elementType": "labels.text",
-            "stylers": [
-                {
-                    "saturation": 1
-                },
-                {
-                    "weight": 0.1
-                },
-                {
-                    "color": "#000000"
-                }
-            ]
+            "color": "#ffffff"
         }
+        ]
+    }, {
+        "featureType": "water",
+        "stylers": [
+        {
+            "color": "#99b3cc"
+        }
+        ]
+    }, {
+        "featureType": "landscape",
+        "stylers": [
+        {
+            "color": "#f2efe9"
+        }
+        ]
+    }, {
+        "elementType": "labels.text.fill",
+        "stylers": [
+        {
+            "color": "#d3cfcf"
+        }
+        ]
+    }, {
+        "featureType": "poi",
+        "stylers": [
+        {
+            "color": "#ded2ac"
+        }
+        ]
+    }, {
+        "elementType": "labels.text",
+        "stylers": [
+        {
+            "saturation": 1
+        },
+        {
+            "weight": 0.1
+        },
+        {
+            "color": "#000000"
+        }
+        ]
+    }
 
     ];
 
@@ -233,13 +243,13 @@ $('#about-our-firm').bind('inview', function (event, visible, visiblePartX, visi
         $.each(contentTop, function (i) {
             if (winTop > contentTop[i] - rangeTop) {
                 $('.navbar-collapse li.scroll')
-                        .removeClass('active')
-                        .eq(i).addClass('active');
+                .removeClass('active')
+                .eq(i).addClass('active');
             }
         })
 
     }
-    ;
+;
 
 }());
 

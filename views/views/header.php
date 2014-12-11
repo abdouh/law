@@ -12,14 +12,14 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a href="#" class="navbar-brand">
-                            <img style="width:400px;height:70;" src="<?= TEMPLATE_URL; ?>/images/romaker-law-firm-3.png" alt="logo">
+                            <img style="max-width:200%;" src="<?= TEMPLATE_URL; ?>/images/logo-black.png" alt="Romaker Law Firm">
                         </a>
 
                     </div>
                 </div><!-- logo -->
 
                 <!-- navbar -->
-                <div class="col-sm-9 np">
+                <div class="col-sm-9 np" style="position:relative; left:10%;">
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="scroll active"><a href="#header">home</a></li>

@@ -11,7 +11,8 @@
                 </div>
             </div>
         </div>					
-    </div><!-- carousel item -->
+    </div>
+    <!-- carousel item -->
 
     <!-- carousel item -->
     <div class="item">
