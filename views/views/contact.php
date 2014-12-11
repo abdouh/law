@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <button type="submit" class="btn wow fadeInRight">Submit</button>
                     </div>
-                    <h1>asdadasdasd</h1>
+                    <h1></h1>
                 </form>	<!-- contact-form -->
             </div>
         </div>
