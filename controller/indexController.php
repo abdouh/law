@@ -108,7 +108,7 @@ Class indexController Extends baseController {
         foreach ($data as $index => $array) {
             $array['offset'] = ($index == 1) ? 'col-lg-offset-3' : '';
             if ($array['has_page'] == 'yes') {
-                $array['link'] = READ_ONLY . '/services/' . $array['title'];
+                $array['link'] = READ_ONLY . '/service/' . $array['link'];
                 $array['element_link'] = "<a href='{$array['link']}'>Read more</a>";
             } else {
                 $array['link'] = '#services_offered';

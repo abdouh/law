@@ -170,7 +170,20 @@ HERE;
                     </div><!-- Bio Section Ends-->
 HERE;
         
-        
+        $templates['service_content'] = <<<HERE
+                <!-- Post -->
+                <div class="post-item">
+                    <!-- Post Title -->
+                    <h2 class="wow fadeInLeft">:title</h2>
+                    <div class="post wow fadeInUp">
+                        <!-- Image -->
+                        <img src=":image" alt="" />
+                        <div class="post-content wow fadeInUp">	
+                            :content
+                        </div>
+                    </div>
+                </div><!-- End Post -->
+HERE;
         
         return $templates[$temp_name];
     }
