@@ -567,7 +567,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #case-resolving {
-	background: url(../images/case-resolving.jpg) no-repeat;
+	/*background: url(../images/case-resolving.jpg) no-repeat;*/
 }
 
 #case-resolving:before {
@@ -654,7 +654,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #achievement {
-	background: url(../images/achievement.jpg) no-repeat;
+	/*background: url(../images/achievement.jpg) no-repeat;*/
 }
 
  #achievement:before {
@@ -781,7 +781,7 @@ section#slider .continer {}
 
 .member-info h3 {
 	margin: 40px 0 10px;
-	font-size:24px;
+	font-size:20px;
 	font-family: 'Merriweather Sans';
 	font-weight: bold;
 	white-space:nowrap;
@@ -899,7 +899,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #testimonial {
-	background:url(../images/testimonial.jpg) no-repeat;
+	/*background:url(../images/testimonial.jpg) no-repeat;*/
 }
 
  #testimonial:before {
@@ -937,7 +937,7 @@ section#slider .continer {}
  ========================================================================== */
 
 #how-to-reach-us {
-	background:url(../images/contact.jpg) no-repeat;	
+	/*background:url(../images/contact.jpg) no-repeat;	*/
 }
 
 #how-to-reach-us:before {
@@ -1034,7 +1034,6 @@ section#slider .continer {}
 	-webkit-box-shadow:  0px 0px 7px #555;
 }
 
-
 section#map-wrapper {
 	-webkit-transform: rotate(-3deg) !important;
 	-moz-transform: rotate(-3deg) !important;
@@ -1044,7 +1043,6 @@ section#map-wrapper {
 	border-bottom:solid 1px #ddd !important;
 }
 section#map-wrapper:before, section#map-wrapper:after {display:none;}
-
 
 
 /* ==========================================================================
@@ -1261,7 +1259,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 
 .blog-list{
-	background:#101111 url(../../images/bg/slider-bg.jpg) no-repeat fixed top center;
+	background:#101111 url(../images/bg/slider-bg.jpg) no-repeat fixed top center;
 	position: relative;
 	height:460px;
 }

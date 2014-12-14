@@ -1,4 +1,3 @@
-
 <!-- news -->
 <section id="news" class="text-center bg-color bg-white">
     <div class="container">
@@ -81,5 +80,4 @@
             <button class="btn wow fadeInRight" data-wow-duration="700ms" data-wow-delay="700ms"><a href="blog.html">View More</a></button>
         </div>
     </div>
-</section>
-<!-- /news -->
+</section><!-- /news -->

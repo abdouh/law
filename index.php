@@ -2,7 +2,7 @@
 
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);
-ini_set('display_errors', false);
+//ini_set('display_errors', false);
 /*
   if ($_SESSION['d'] == 'abdouhabibi2080') {
   define('WEB', 1);
@@ -15,6 +15,7 @@ define('WEB', 1);
 /* * * define the site path ** */
 $site_path = realpath(dirname(__FILE__));
 define('__SITE_PATH', $site_path);
+define('SITE_DATA', $site_path . '/views/site_data');
 define('READ_ONLY', 'http://law.localhost');
 define('TEMPLATE_URL', 'http://law.localhost/views');
 

@@ -37,10 +37,10 @@ jQuery(function ($) {
         mapTypeControl: false,
         overviewMapControl: false,
         clickable: false,
-        click: function(){
-            if (isInfoWindowOpen(map.markers[0].infoWindow)){
+        click: function () {
+            if (isInfoWindowOpen(map.markers[0].infoWindow)) {
             } else {
-            (map.markers[0].infoWindow).open(map.map, map.markers[0]);
+                (map.markers[0].infoWindow).open(map.map, map.markers[0]);
             }
         }
     });
@@ -62,9 +62,6 @@ jQuery(function ($) {
         lng: -87.63458789999999,
         //icon: image,
         clickable: true,
-        click: function (e) {
-            alert('here');
-        },
         title: 'Rowmaker Law',
         animation: google.maps.Animation.DROP,
         verticalAlign: 'bottom',
@@ -83,62 +80,62 @@ jQuery(function ($) {
     });
 
     (map.markers[0].infoWindow).open(map.map, map.markers[0]);
-    
-    function isInfoWindowOpen(infoWindow){
+
+    function isInfoWindowOpen(infoWindow) {
         var map = infoWindow.getMap();
         return (map !== null && typeof map !== "undefined");
     }
 
     var styles = [
-    {
-        "featureType": "road",
-        "stylers": [
         {
-            "color": "#ffffff"
+            "featureType": "road",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        }, {
+            "featureType": "water",
+            "stylers": [
+                {
+                    "color": "#99b3cc"
+                }
+            ]
+        }, {
+            "featureType": "landscape",
+            "stylers": [
+                {
+                    "color": "#f2efe9"
+                }
+            ]
+        }, {
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#d3cfcf"
+                }
+            ]
+        }, {
+            "featureType": "poi",
+            "stylers": [
+                {
+                    "color": "#ded2ac"
+                }
+            ]
+        }, {
+            "elementType": "labels.text",
+            "stylers": [
+                {
+                    "saturation": 1
+                },
+                {
+                    "weight": 0.1
+                },
+                {
+                    "color": "#000000"
+                }
+            ]
         }
-        ]
-    }, {
-        "featureType": "water",
-        "stylers": [
-        {
-            "color": "#99b3cc"
-        }
-        ]
-    }, {
-        "featureType": "landscape",
-        "stylers": [
-        {
-            "color": "#f2efe9"
-        }
-        ]
-    }, {
-        "elementType": "labels.text.fill",
-        "stylers": [
-        {
-            "color": "#d3cfcf"
-        }
-        ]
-    }, {
-        "featureType": "poi",
-        "stylers": [
-        {
-            "color": "#ded2ac"
-        }
-        ]
-    }, {
-        "elementType": "labels.text",
-        "stylers": [
-        {
-            "saturation": 1
-        },
-        {
-            "weight": 0.1
-        },
-        {
-            "color": "#000000"
-        }
-        ]
-    }
 
     ];
 
@@ -243,14 +240,13 @@ $('#about-our-firm').bind('inview', function (event, visible, visiblePartX, visi
         $.each(contentTop, function (i) {
             if (winTop > contentTop[i] - rangeTop) {
                 $('.navbar-collapse li.scroll')
-                .removeClass('active')
-                .eq(i).addClass('active');
+                        .removeClass('active')
+                        .eq(i).addClass('active');
             }
         })
 
     }
-;
-
+    
 }());
 
 
@@ -299,22 +295,47 @@ $(function () {
 
 $(function () {
     $('#contact-form').submit(function () {
+        $('html, body').animate({
+            scrollTop: $("#how-to-reach-us").offset().top
+        }, 2000);
+        $('.show-on-error').hide();
+        $('.show-on-success').show();
+        $('.show-on-success').html('processing....');
         var name = $('#name').val();
         var email = $('#email').val();
         var subject = $('#subject').val();
         var message = $('#message').val();
+        var captcha = $('#captcha').val();
         $.ajax({
             type: 'POST',
-            url: './sendemail.php',
+            url: '/dev/sendemail',
             data: {
                 name: name,
                 email: email,
                 subject: subject,
-                message: message
+                message: message,
+                captcha: captcha
+            },
+            success: function (incoming) {
+                console.log(incoming);
+                var data = jQuery.parseJSON(incoming);
+                alert(data.operation);
+                if (data.operation == 1) {
+                    $('#contact-form').trigger('reset');
+                    $('.show-on-error').hide();
+                    $('.show-on-success').html('Thanks for the mail, We will contact you shortly');
+                    $('.show-on-success').show("slow");
+                } else {
+                    if (data.code == 1) {
+                        document.getElementById('captcha_img').src = '/dev/index/captcha?' + Math.random();
+                        $('input[name="captcha"]').val('');
+                    }
+                    $('.show-on-success').hide();
+                    $('.show-on-error').html(data.error);
+                    $('.show-on-error').show("slow");
+                }
             }
         });
-        $('#contact-form').trigger('reset');
-        $('.show-on-success').show("slow");
         return false;
     });
 })
@@ -325,7 +346,7 @@ $(function () {
 $('.slider').bxSlider({
     auto: true,
     speed: 1000,
-    pause:10000,
+    pause: 10000,
     touchEnabled: false,
     controls: false,
     onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {

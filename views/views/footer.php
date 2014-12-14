@@ -20,5 +20,4 @@
         <p class="copyright wow fadeInRight">&copy; copyright 2014 baratheon lawyer firm - psd theme.</p>
 
     </div>
-</section>
-<!-- /footer -->
+</section><!-- /footer -->
