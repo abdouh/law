@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <!-- about-our-firm -->
 <section id="about-our-firm" class="bg-color bg-white"> 
     <div class="container">

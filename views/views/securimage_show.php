@@ -1,7 +1,7 @@
-<?
+<?php
 
 if (!defined('WEB'))
-    exit();
+    exit;
 ?>
 <?php
 

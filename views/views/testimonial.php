@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <!-- testimonial -->
 <section id="testimonial" style="background:url(<?= $testimonials['image']; ?>) no-repeat;" class="bg-image bg-orange">
     <div class="container wow fadeInRight">

@@ -85,6 +85,13 @@ class router {
 
         /*         * * get the route from the url ** */
         $route = (empty($_GET['rt'])) ? '' : $_GET['rt'];
+
+        $parts = explode('/', $route);
+        if ($parts[0] == 'es') {
+            $route = substr($_GET['rt'], strpos($_GET['rt'], 'es/') + 3);
+            $_GET['lang'] = 'es';
+        }
+
         if (empty($route)) {
             $route = 'index';
         } else {

@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <!DOCTYPE html>
 <html>
 

@@ -26,5 +26,5 @@ function __autoload($class_name) {
 /* * * a new registry object ** */
 $registry = new registry;
 /* * * create the database registry object ** */
-$registry->db = db::getInstance();
+//$registry->db = db::getInstance();
 ?>

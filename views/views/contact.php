@@ -1,8 +1,13 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <!-- how-to-reach-us -->
 <section id="how-to-reach-us" style="background:url(<?= TEMPLATE_URL; ?>/site_data/contact/images/background.jpg) no-repeat;" class="bg-image text-center bg-mulled-wine-rgba">
     <div class="container">
         <div class="row">
             <h1 class="title wow fadeInDown" data-wow-duration="700ms" data-wow-delay="300ms">Contact Us Now</h1>
+            <h3 class="title wow fadeInDown" data-wow-duration="700ms" data-wow-delay="300ms">Free Case Evaluation. Complete this form or call (312) 377-7000</h3>
             <div class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                 <!-- contact-form -->
                 <form id="contact-form" class="contact-form" name="contact-form" method="post" action="">

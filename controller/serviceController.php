@@ -3,18 +3,27 @@
 Class serviceController Extends baseController {
 
     protected $service = array();
+    protected $site_data = SITE_DATA;
+    protected $site_data_read = 'site_data';
 
     public function index() {
         $service_link = substr($_GET['rt'], strpos($_GET['rt'], 'service/') + 8);
         if (empty($service_link) || !$this->check_service_exists($service_link))
             header('Location: /error404');
+
+        if (isset($_GET['lang']) && ($_GET['lang'] == 'es')) {
+            $this->site_data = SITE_DATA_ES;
+            $this->site_data_read = 'site_data_es';
+        }
+
+        $this->registry->template->title = $this->service['title'];
         $this->registry->template->service = $this->prepare_service();
         $this->registry->template->link = READ_ONLY . '/';
         $this->registry->template->show('service');
     }
 
     protected function check_service_exists($link) {
-        $services = include SITE_DATA . '/services/pages.php';
+        $services = include $this->site_data . '/services/pages.php';
         foreach ($services as $index => $service) {
             if ($service['link'] == $link) {
                 $this->service = $service;
@@ -25,7 +34,7 @@ Class serviceController Extends baseController {
     }
 
     protected function prepare_service() {
-        $images = TEMPLATE_URL . '/site_data/services/images/';
+        $images = TEMPLATE_URL . "/{$this->site_data_read}/services/images/";
         $data = $this->service;
         $output = array();
 

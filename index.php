@@ -16,6 +16,7 @@ define('WEB', 1);
 $site_path = realpath(dirname(__FILE__));
 define('__SITE_PATH', $site_path);
 define('SITE_DATA', $site_path . '/views/site_data');
+define('SITE_DATA_ES', $site_path . '/views/site_data_es');
 define('READ_ONLY', 'http://law.localhost');
 define('TEMPLATE_URL', 'http://law.localhost/views');
 

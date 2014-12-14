@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,6 +16,6 @@
         <? include 'footer.php'; ?>
 
         <? include 'scripts.php'; ?>
-        
+
     </body>
 </html>

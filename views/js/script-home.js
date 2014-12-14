@@ -87,55 +87,55 @@ jQuery(function ($) {
     }
 
     var styles = [
+    {
+        "featureType": "road",
+        "stylers": [
         {
-            "featureType": "road",
-            "stylers": [
-                {
-                    "color": "#ffffff"
-                }
-            ]
-        }, {
-            "featureType": "water",
-            "stylers": [
-                {
-                    "color": "#99b3cc"
-                }
-            ]
-        }, {
-            "featureType": "landscape",
-            "stylers": [
-                {
-                    "color": "#f2efe9"
-                }
-            ]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#d3cfcf"
-                }
-            ]
-        }, {
-            "featureType": "poi",
-            "stylers": [
-                {
-                    "color": "#ded2ac"
-                }
-            ]
-        }, {
-            "elementType": "labels.text",
-            "stylers": [
-                {
-                    "saturation": 1
-                },
-                {
-                    "weight": 0.1
-                },
-                {
-                    "color": "#000000"
-                }
-            ]
+            "color": "#ffffff"
         }
+        ]
+    }, {
+        "featureType": "water",
+        "stylers": [
+        {
+            "color": "#99b3cc"
+        }
+        ]
+    }, {
+        "featureType": "landscape",
+        "stylers": [
+        {
+            "color": "#f2efe9"
+        }
+        ]
+    }, {
+        "elementType": "labels.text.fill",
+        "stylers": [
+        {
+            "color": "#d3cfcf"
+        }
+        ]
+    }, {
+        "featureType": "poi",
+        "stylers": [
+        {
+            "color": "#ded2ac"
+        }
+        ]
+    }, {
+        "elementType": "labels.text",
+        "stylers": [
+        {
+            "saturation": 1
+        },
+        {
+            "weight": 0.1
+        },
+        {
+            "color": "#000000"
+        }
+        ]
+    }
 
     ];
 
@@ -240,8 +240,8 @@ $('#about-our-firm').bind('inview', function (event, visible, visiblePartX, visi
         $.each(contentTop, function (i) {
             if (winTop > contentTop[i] - rangeTop) {
                 $('.navbar-collapse li.scroll')
-                        .removeClass('active')
-                        .eq(i).addClass('active');
+                .removeClass('active')
+                .eq(i).addClass('active');
             }
         })
 
@@ -308,7 +308,7 @@ $(function () {
         var captcha = $('#captcha').val();
         $.ajax({
             type: 'POST',
-            url: '/dev/sendemail',
+            url: '/sendemail',
             data: {
                 name: name,
                 email: email,
@@ -317,19 +317,18 @@ $(function () {
                 captcha: captcha
             },
             success: function (incoming) {
+                $('.show-on-success').html('');
+                $('.show-on-error').html('');
+                document.getElementById('captcha_img').src = '/index/captcha?' + Math.random();
+                $('input[name="captcha"]').val('');
                 console.log(incoming);
                 var data = jQuery.parseJSON(incoming);
-                alert(data.operation);
                 if (data.operation == 1) {
                     $('#contact-form').trigger('reset');
                     $('.show-on-error').hide();
                     $('.show-on-success').html('Thanks for the mail, We will contact you shortly');
                     $('.show-on-success').show("slow");
                 } else {
-                    if (data.code == 1) {
-                        document.getElementById('captcha_img').src = '/dev/index/captcha?' + Math.random();
-                        $('input[name="captcha"]').val('');
-                    }
                     $('.show-on-success').hide();
                     $('.show-on-error').html(data.error);
                     $('.show-on-error').show("slow");

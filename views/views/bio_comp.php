@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <style>
     .post-content h4{
         line-height: 1.2cm;

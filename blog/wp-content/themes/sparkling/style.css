@@ -38,6 +38,21 @@ sparkling is based on Underscores http://underscores.me/, (C) 2012-2014 Automatt
 15. Call For Action
 */
 
+/* =ABDOU
+----------------------------------------------- */
+.menu-item a {
+color: rgb(39, 41, 48) !important;
+
+font-size: 14px !important;
+font-weight: bold !important;
+}
+.menu-item a:hover,
+.menu-item a:focus {
+  color: rgb(232, 136, 85) !important;
+}
+
+
+
 /* =Global
 ----------------------------------------------- */
 body {

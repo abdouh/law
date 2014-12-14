@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <script src="<?= TEMPLATE_URL; ?>/js/jquery-2.1.1.min.js"></script><!-- Jquery -->
 <script src="<?= TEMPLATE_URL; ?>/js/bootstrap.min.js"></script>	<!-- Bootstrap -->
 <script src="<?= TEMPLATE_URL; ?>/js/jquery.inview.min.js"></script><!-- Inview JS -->

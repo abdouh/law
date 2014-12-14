@@ -1,3 +1,7 @@
+<?php
+if (!defined('WEB'))
+    header('Location: /error404');
+?>
 <!-- case-resolving -->
 <section id="case-resolving" style="background:url(<?= $case_resolving['image']; ?>) no-repeat;" class="text-center bg-image bg-orange">
     <div class="container">
