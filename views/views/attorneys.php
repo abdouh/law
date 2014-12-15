@@ -6,7 +6,7 @@ if (!defined('WEB'))
 <section id="team-of-lawyers" class="bg-color bg-mulled-wine text-center">
     <div class="container">
         <div class="row">
-            <h1 class="title wow fadeInRight">Our Team of Lawyers</h1>
+            <h1 class="title wow fadeInRight"><?= $phrases['our_team_of_lawyers']; ?></h1>
             <?= $attorneys['lead_attorney']; ?>
         </div>
     </div>

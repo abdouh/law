@@ -300,7 +300,7 @@ $(function () {
         }, 2000);
         $('.show-on-error').hide();
         $('.show-on-success').show();
-        $('.show-on-success').html('processing....');
+        $('.show-on-success').html($('#contact_processing').html());
         var name = $('#name').val();
         var email = $('#email').val();
         var subject = $('#subject').val();
@@ -308,7 +308,7 @@ $(function () {
         var captcha = $('#captcha').val();
         $.ajax({
             type: 'POST',
-            url: '/sendemail',
+            url: $('#contact_link').html(),
             data: {
                 name: name,
                 email: email,
@@ -326,7 +326,7 @@ $(function () {
                 if (data.operation == 1) {
                     $('#contact-form').trigger('reset');
                     $('.show-on-error').hide();
-                    $('.show-on-success').html('Thanks for the mail, We will contact you shortly');
+                    $('.show-on-success').html($('#contact_success').html());
                     $('.show-on-success').show("slow");
                 } else {
                     $('.show-on-success').hide();

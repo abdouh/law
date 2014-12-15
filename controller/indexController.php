@@ -106,7 +106,7 @@ Class indexController Extends baseController {
 
     protected function prepare_case_resolving() {
         $data = include $this->site_data . '/case_resolving/content.php';
-        $data['image'] = TEMPLATE_URL . '/{$this->site_data_read}/case_resolving/images/background.jpg';
+        $data['image'] = TEMPLATE_URL . "/{$this->site_data_read}/case_resolving/images/background.jpg";
         return $data;
     }
 
@@ -137,7 +137,7 @@ Class indexController Extends baseController {
         foreach ($data as $index => $array) {
             $output['content'] .= Temp::get_template($array, 'achievment') . "\n";
         }
-        $output['image'] = TEMPLATE_URL . '/{$this->site_data_read}/achievments/images/background.jpg';
+        $output['image'] = TEMPLATE_URL . "/{$this->site_data_read}/achievments/images/background.jpg";
         return $output;
     }
 

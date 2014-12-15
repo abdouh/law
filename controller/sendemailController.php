@@ -3,6 +3,18 @@
 Class sendemailController Extends baseController {
 
     protected $email_info = array();
+    protected $errors = array(
+        'en' => array(
+            'invalid_email' => 'Please enter a valid email address',
+            'wrong_code' => 'You entered a wrong code',
+            'fill_all' => 'Please fill in all form elements'
+        ),
+        'es' => array(
+            'invalid_email' => 'Introduzca una dirección de correo electrónico válida.',
+            'wrong_code' => 'código de seguridad es incorrecto',
+            'fill_all' => 'rellene todos los elementos del formulario'
+        ),
+    );
 
     public function index() {
         $this->registry->template->success = false;
@@ -13,12 +25,17 @@ Class sendemailController Extends baseController {
                 $this->email_info['subject'] = strip_tags($_POST['subject']);
                 $this->email_info['message'] = strip_tags($_POST['message']);
 
-                $securimage = new Securimage();
+                if (isset($_GET['lang']) && ($_GET['lang'] == 'es')) {
+                    $errors = $this->errors['es'];
+                } else {
+                    $errors = $this->errors['en'];
+                }
 
+                $securimage = new Securimage();
                 if (!Validation::email($_POST['email'])) {
-                    $response = json_encode(array("operation" => 2, "error" => "You must enter a valid email address"));
+                    $response = json_encode(array("operation" => 2, "error" => $errors['invalid_email']));
                 } else if ($securimage->check($_POST['captcha']) == false) {
-                    $response = json_encode(array("operation" => 2, "error" => "You entered a wrong code", 'code' => 1));
+                    $response = json_encode(array("operation" => 2, "error" => $errors['wrong_code']));
                 } else {
                     $this->email_info['email'] = $_POST['email'];
                     $this->send_email();
@@ -26,7 +43,7 @@ Class sendemailController Extends baseController {
                 }
                 echo $response;
             } else {
-                echo json_encode(array("operation" => 2, "error" => "You must fill all form elements"));
+                echo json_encode(array("operation" => 2, "error" => $errors['fill_all']));
             }
         }
     }
@@ -36,7 +53,7 @@ Class sendemailController Extends baseController {
 
         $headers = "From: " . strip_tags('no-reply@romakerlaw.com') . "\r\n";
         $headers .= "Reply-To: " . strip_tags('no-reply@romakerlaw.com') . "\r\n";
-        //$headers .= "CC: susan@example.com\r\n";
+        //$headers .= "CC: cpr@example.com\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 

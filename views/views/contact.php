@@ -6,13 +6,16 @@ if (!defined('WEB'))
 <section id="how-to-reach-us" style="background:url(<?= TEMPLATE_URL; ?>/site_data/contact/images/background.jpg) no-repeat;" class="bg-image text-center bg-mulled-wine-rgba">
     <div class="container">
         <div class="row">
-            <h1 class="title wow fadeInDown" data-wow-duration="700ms" data-wow-delay="300ms">Contact Us Now</h1>
-            <h3 class="title wow fadeInDown" data-wow-duration="700ms" data-wow-delay="300ms">Free Case Evaluation. Complete this form or call (312) 377-7000</h3>
+            <h1 class="title wow fadeInDown" data-wow-duration="700ms" data-wow-delay="300ms"><?= $phrases['contact_us_now']; ?></h1>
+            <h3 class="title wow fadeInDown" data-wow-duration="700ms" data-wow-delay="300ms"><?= $phrases['free_case']; ?></h3>
             <div class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                 <!-- contact-form -->
                 <form id="contact-form" class="contact-form" name="contact-form" method="post" action="">
-                    <h1 class="show-on-success lead" style="display:none;">Thanks for the mail, We will contact you shortly</h1>
+                    <h1 class="show-on-success lead" style="display:none;"></h1>
                     <h1 class="show-on-error lead" style="display:none;"></h1>
+                    <h1 id="contact_success" style="display:none;"><?= $phrases['contact_success']; ?></h1>
+                    <h1 id="contact_processing" style="display:none;"><?= $phrases['contact_processing']; ?></h1>
+                    <h1 id="contact_link" style="display:none;"><?= $form_link; ?></h1>
                     <div class="row">
                         <div class="form-group col-sm-6 name-field">
                             <input type="text" id="name" name="name" class="form-control" required="required" placeholder="Your Name">

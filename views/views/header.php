@@ -26,14 +26,14 @@ if (!defined('WEB'))
                 <div class="col-sm-10 np" style="position:relative; left:20%;">
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="scroll <?= empty($link) ? 'active' : ''; ?>"><a href="<?= $link; ?>#header">home</a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#about-our-firm">about us</a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#services-offered">services offered</a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#team-of-lawyers">our lawyers</a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#how-to-reach-us">contact us</a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#our-location">how to reach us</a></li>
-                            <li><a href="<?= $link; ?>#">blog</a></li>
-                            <li><a href="<?= $link; ?>#">Español</a></li>
+                            <li class="scroll <?= empty($link) ? 'active' : ''; ?>"><a href="<?= $link; ?>#header"><?= $phrases['home']; ?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#about-our-firm"><?= $phrases['about_us']; ?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#services-offered"><?=$phrases['services_offered'];?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#team-of-lawyers"><?=$phrases['our_lawyers'];?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#how-to-reach-us"><?=$phrases['contact_us'];?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#our-location"><?=$phrases['how_to_reach_us'];?></a></li>
+                            <li><a href="<?= $blog_link; ?>"><?=$phrases['blog'];?></a></li>
+                            <li><a href="<?= $lang_link; ?>"><?=$phrases['lang'];?></a></li>
                         </ul>
                     </div>
                 </div><!-- /navbar -->

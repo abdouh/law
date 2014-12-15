@@ -1,6 +1,17 @@
 <?php
 if (!defined('WEB'))
     header('Location: /error404');
+if ($_GET['lang'] == 'es') {
+    include 'lang-es.php';
+    $blog_link = READ_ONLY . '/blog-es';
+    $lang_link = READ_ONLY . '/';
+    $form_link = READ_ONLY . '/es/sendemail';
+} else {
+    include 'lang-en.php';
+    $blog_link = READ_ONLY . '/blog';
+    $lang_link = READ_ONLY . '/es/';
+    $form_link = READ_ONLY . '/sendemail';
+}
 ?>
 <!DOCTYPE html>
 <html>

@@ -6,7 +6,7 @@ if (!defined('WEB'))
 <section id="about-our-firm" class="bg-color bg-white"> 
     <div class="container">
         <div class="row">
-            <h1 class="title text-center wow zoomIn">About Our Firm</h1>
+            <h1 class="title text-center wow zoomIn"><?= $phrases['about_our_firm']; ?></h1>
             <!-- our-skill -->
             <div class="col-lg-6 col-sm-6 col-sm-6 col-xs-12 wow fadeInLeft">
                 <div class="our-skill">

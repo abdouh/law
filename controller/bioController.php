@@ -10,14 +10,15 @@ Class bioController Extends baseController {
         $bio_link = substr($_GET['rt'], strpos($_GET['rt'], 'bio/') + 4);
         if (empty($bio_link) || !$this->check_bio_exists($bio_link))
             header('Location: /error404');
-
+        $link = READ_ONLY . '/';
         if (isset($_GET['lang']) && ($_GET['lang'] == 'es')) {
             $this->site_data = SITE_DATA_ES;
             $this->site_data_read = 'site_data_es';
+            $link = READ_ONLY . '/es/';
         }
         $this->registry->template->title = $this->bio['title'];
         $this->registry->template->bio = $this->prepare_bio();
-        $this->registry->template->link = READ_ONLY . '/';
+        $this->registry->template->link = $link;
         $this->registry->template->show('bio');
     }
 
