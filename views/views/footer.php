@@ -27,7 +27,7 @@ if (!defined('WEB'))
         </div><!-- social -->
 
         <p class="copyright wow fadeInRight">&copy; <?= $phrases['copy_right']; ?></p>
-        <p class="copyright wow fadeInRight"><a href="/disclaimer"><?= $phrases['legal_disclaimer']; ?></a> - <a href="/privacy"><?= $phrases['privacy_policy']; ?></a></p>
+        <p class="copyright wow fadeInRight"><a href="<?= $home_link; ?>disclaimer"><?= $phrases['legal_disclaimer']; ?></a> - <a href="<?= $home_link; ?>privacy"><?= $phrases['privacy_policy']; ?></a></p>
         <h6 class="copyright wow fadeInRight"><a href="mailto:dev.abstract@gmail.com?subject=Consultation%20Request">By Abstract</a></h6>
     </div>
 </section><!-- /footer -->

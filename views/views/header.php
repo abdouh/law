@@ -22,18 +22,21 @@ if (!defined('WEB'))
                     </div>
                 </div>
                 <!-- logo -->
+                <div dir="rtl" style="font-family: arial;color:#39536c;padding-right:10%;">
+                    <a style="color:#39536c;" href="<?= READ_ONLY; ?>/es/"><img style="width:20px;" alt="Español" title="Español" src="<?= TEMPLATE_URL?>/images/mexico_flag.png"></a> | 
+                    <a style="color:#39536c;" href="<?= READ_ONLY; ?>/"><img style="width:20px;" alt="English" title="English" src="<?= TEMPLATE_URL?>/images/us_flag.png"></a>
+                </div>
                 <!-- navbar -->
                 <div class="col-sm-12 np" style="">
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav" style="padding-left:110px;">
+                        <ul class="nav navbar-nav" style="padding-left:180px;">
                             <li class="scroll <?= empty($link) ? 'active' : ''; ?>"><a href="<?= $link; ?>#header"><?= $phrases['home']; ?></a></li>
                             <li class="scroll"><a href="<?= $link; ?>#about-our-firm"><?= $phrases['about_us']; ?></a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#services-offered"><?=$phrases['services_offered'];?></a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#team-of-lawyers"><?=$phrases['our_lawyers'];?></a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#how-to-reach-us"><?=$phrases['contact_us'];?></a></li>
-                            <li class="scroll"><a href="<?= $link; ?>#our-location"><?=$phrases['how_to_reach_us'];?></a></li>
-                            <li><a href="<?= $blog_link; ?>"><?=$phrases['blog'];?></a></li>
-                            <li><a href="<?= $lang_link; ?>"><?=$phrases['lang'];?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#services-offered"><?= $phrases['services_offered']; ?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#team-of-lawyers"><?= $phrases['our_lawyers']; ?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#how-to-reach-us"><?= $phrases['contact_us']; ?></a></li>
+                            <li class="scroll"><a href="<?= $link; ?>#our-location"><?= $phrases['how_to_reach_us']; ?></a></li>
+                            <li><a href="<?= $blog_link; ?>"><?= $phrases['blog']; ?></a></li>
                         </ul>
                     </div>
                 </div><!-- /navbar -->

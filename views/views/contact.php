@@ -15,7 +15,7 @@ if (!defined('WEB'))
                     <h1 class="show-on-error lead" style="display:none;"></h1>
                     <h1 id="contact_success" style="display:none;"><?= $phrases['contact_success']; ?></h1>
                     <h1 id="contact_processing" style="display:none;"><?= $phrases['contact_processing']; ?></h1>
-                    <h1 id="contact_link" style="display:none;"><?= $form_link; ?></h1>
+                    <h1 id="contact_link" style="display:none;"><?= $home_link; ?>sendemail</h1>
                     <div class="row">
                         <div class="form-group col-sm-6 name-field">
                             <input type="text" id="name" name="name" class="form-control" required="required" placeholder="Your Name">
@@ -32,9 +32,9 @@ if (!defined('WEB'))
                             <input type="text" id="captcha" name="captcha" class="form-control" required="required" placeholder="Enter Code">
                         </div>
                         <div class="form-group col-sm-3 subject-field">
-                            <img id="captcha_img" src="/index/captcha" alt="CAPTCHA Image" />
+                            <img id="captcha_img" src="<?= $home_link; ?>index/captcha" alt="CAPTCHA Image" />
                             <a href="#" style="color:#fff;" onmouseover="this.style.color ='#E88855';" onmouseout="this.style.color ='#fff';" 
-                               onclick="document.getElementById('captcha_img').src = '/index/captcha?' + Math.random();return false">Change</a>
+                               onclick="document.getElementById('captcha_img').src = '<?= $home_link; ?>index/captcha?' + Math.random();return false">Change</a>
                         </div>
 
 

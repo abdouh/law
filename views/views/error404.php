@@ -4,11 +4,11 @@ if (!defined('WEB'))
 if ($_GET['lang'] == 'es') {
     include 'lang-es.php';
     $blog_link = READ_ONLY . '/blog-es';
-    $lang_link = READ_ONLY . '/';
+    $home_link = READ_ONLY . '/es/';
 } else {
     include 'lang-en.php';
     $blog_link = READ_ONLY . '/blog';
-    $lang_link = READ_ONLY . '/es/';
+    $home_link = READ_ONLY . '/';
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ if ($_GET['lang'] == 'es') {
                             <img src="<?= TEMPLATE_URL; ?>/images/404.jpg" alt="" />
                             <div class="author-comment">
                                 <h3>Error 404</h3>
-                                <p>Sorry, the page you're looking for do not exist. <a href="<?= READ_ONLY; ?>">Back to home.</a></p>
+                                <p>Sorry, the page you're looking for do not exist. <a href="<?= $home_link; ?>">Back to home.</a></p>
                             </div>						
                             <div class="clear"></div>							
                         </div><!-- Author Section Ends-->

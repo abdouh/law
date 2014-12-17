@@ -10,7 +10,6 @@ $phrases['our_lawyers'] = 'OUR LAWYERS';
 $phrases['contact_us'] = 'CONTACT US';
 $phrases['how_to_reach_us'] = 'HOW TO REACH US';
 $phrases['blog'] = 'BLOG';
-$phrases['lang'] = 'Español';
 
 //about firm
 $phrases['about_our_firm'] = 'ABOUT OUR FIRM';
