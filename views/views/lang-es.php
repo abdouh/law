@@ -3,8 +3,8 @@ if (!defined('WEB'))
     header('Location: /error404');
 
 //nav bar
-$phrases['home'] = 'HOME';
-$phrases['about_us'] = 'ABOUT US';
+$phrases['home'] = 'INICIO';
+$phrases['about_us'] = '¿Quiénes somos?';
 $phrases['services_offered'] = 'SERVICES OFFERED';
 $phrases['our_lawyers'] = 'OUR LAWYERS';
 $phrases['contact_us'] = 'CONTACT US';

@@ -16,16 +16,16 @@ if (!defined('WEB'))
                             <span class="icon-bar"></span>
                         </button>
                         <a href="<?= READ_ONLY; ?>">
-                            <img style="max-width:200%;" src="<?= TEMPLATE_URL; ?>/images/logo-black.png" alt="Romaker Law Firm">
+                            <img id="logo-int" style="max-width:200%;" src="<?= TEMPLATE_URL; ?>/images/logo-black.png" alt="Romaker Law Firm">
                         </a>
 
                     </div>
                 </div>
                 <!-- logo -->
                 <!-- navbar -->
-                <div class="col-sm-10 np" style="position:relative; left:20%;">
+                <div class="col-sm-12 np" style="">
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav" style="padding-left:110px;">
                             <li class="scroll <?= empty($link) ? 'active' : ''; ?>"><a href="<?= $link; ?>#header"><?= $phrases['home']; ?></a></li>
                             <li class="scroll"><a href="<?= $link; ?>#about-our-firm"><?= $phrases['about_us']; ?></a></li>
                             <li class="scroll"><a href="<?= $link; ?>#services-offered"><?=$phrases['services_offered'];?></a></li>

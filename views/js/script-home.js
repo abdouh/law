@@ -359,3 +359,12 @@ $('.slider').bxSlider({
 });
 
 
+// --------------------------
+// LOGO WIDTH
+// --------------------------
+
+var wid = $(window).width();
+
+if(wid <580){
+    $('#logo-int').attr('width','250px');
+}

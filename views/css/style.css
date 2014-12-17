@@ -1954,6 +1954,7 @@ section.slider:after, section.slider:before { display:none;}
 		margin-top:24px;
 	} .slider .item.active-slide .carousel-caption button 
 	{ margin-top:15px;}
+        #logo-int{width:250px;}
 	}
 
 @media screen and (max-width:480px) { 
@@ -1971,4 +1972,5 @@ section.slider:after, section.slider:before { display:none;}
 	.team_member { width:100%; float:none;}
 	#about-our-firm:before { display:none;}
 	.bx-wrapper { margin-top:60px !important;}
+        #logo-int{width:200px;}
 }

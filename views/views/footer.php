@@ -21,13 +21,13 @@ if (!defined('WEB'))
                 </li>
             </ul>
             <ul class="list-inline">
-                <li class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="500ms"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="700ms"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="500ms"><a target="_blank" href="http://facebook.com/RomakerLawfirm"><i class="fa fa-facebook"></i></a></li>
+                <li class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="700ms"><a target="_blank" href="http://twitter.com/Romaker312"><i class="fa fa-twitter"></i></a></li>
             </ul>
         </div><!-- social -->
 
         <p class="copyright wow fadeInRight">&copy; <?= $phrases['copy_right']; ?></p>
         <p class="copyright wow fadeInRight"><a href="/disclaimer"><?= $phrases['legal_disclaimer']; ?></a> - <a href="/privacy"><?= $phrases['privacy_policy']; ?></a></p>
-        <h6 class="copyright wow fadeInRight"><a href="mailto:">By Abstract</a></h6>
+        <h6 class="copyright wow fadeInRight"><a href="mailto:dev.abstract@gmail.com?subject=Consultation%20Request">By Abstract</a></h6>
     </div>
 </section><!-- /footer -->
