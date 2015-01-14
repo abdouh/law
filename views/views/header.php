@@ -22,9 +22,8 @@ if (!defined('WEB'))
                     </div>
                 </div>
                 <!-- logo -->
-                <div dir="rtl" style="font-family: arial;color:#39536c;padding-right:10%;">
-                    <a style="color:#39536c;" href="<?= READ_ONLY; ?>/es/"><img style="width:20px;" alt="Español" title="Español" src="<?= TEMPLATE_URL?>/images/mexico_flag.png"></a> | 
-                    <a style="color:#39536c;" href="<?= READ_ONLY; ?>/"><img style="width:20px;" alt="English" title="English" src="<?= TEMPLATE_URL?>/images/us_flag.png"></a>
+                <div dir="rtl" style="font-weight:bold;color:#39536c;padding-right:10%;">
+                    <a style="color:#39536c;" href="<?= READ_ONLY; ?>/">English</a> | <a style="color:#39536c;" href="<?= READ_ONLY; ?>/es/">Español</a>
                 </div>
                 <!-- navbar -->
                 <div class="col-sm-12 np" style="">
