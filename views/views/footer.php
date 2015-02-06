@@ -13,10 +13,15 @@ if (!defined('WEB'))
                 <li class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="700ms">
                     <p><br> <br> <a id="bbblink" class="ruhzbul" style="display: block; position: relative; overflow: hidden; width: 200px; height: 90px; margin: 0px; padding: 0px;" title="Charles P. Romaker, P.C., Attorneys &amp; Lawyers, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/attorneys-and-lawyers/charles-p-romaker-pc-in-chicago-il-88535647#bbbseal" target="_blank"><img id="bbblinkimg" style="padding: 0px; border: none;" src="http://seal-chicago.bbb.org/logo/ruhzbul/charles-p-romaker-pc-88535647.png" alt="Charles P. Romaker, P.C., Attorneys &amp; Lawyers, Chicago, IL" width="400" height="90"></a></p>
                     <script type="text/javascript">// <![CDATA[
-                        var bbbprotocol = ( ("https:" == document.location.protocol) ? "https://" : "http://" ); document.write(unescape("%3Cscript src='" + bbbprotocol + 'seal-chicago.bbb.org' + unescape('%2Flogo%2Fcharles-p-romaker-pc-88535647.js') + "' type='text/javascript'%3E%3C/script%3E"));
+                        var bbbprotocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+                        document.write(unescape("%3Cscript src='" + bbbprotocol + 'seal-chicago.bbb.org' + unescape('%2Flogo%2Fcharles-p-romaker-pc-88535647.js') + "' type='text/javascript'%3E%3C/script%3E"));
                         // ]]></script>
                     <script src="http://seal-chicago.bbb.org/logo/charles-p-romaker-pc-88535647.js" type="text/javascript"></script>
                     <script src="http://seal-chicago.bbb.org/logo/charles-p-romaker-pc-88535647.js" type="text/javascript"></script>
+                    <p>
+                        <script type="text/javascript" src="http://www.avvo.com/assets/badges-v2.js"></script>
+                    <div class="avvo_badge" data-type="rating" data-specialty="67" data-target="http://www.avvo.com/professional_badges/1093252" data-version="1"><div class="avvo_content"><a href="http://www.avvo.com/attorneys/60606-il-charles-romaker-1093252.html?utm_campaign=avvo_rating&utm_content=1093252&utm_medium=avvo_badge&utm_source=avvo" rel="me" target="_blank">Lawyer Charles Romaker</a> | <a href="http://www.avvo.com/workers-compensation-lawyer/il/chicago.html?utm_campaign=avvo_rating&utm_content=1093252&utm_medium=avvo_badge&utm_source=avvo" target="_blank">Top Attorney Workers Compensation</a></div></div>
+                    </p>
                     <p><a href="http://www.avvo.com/attorneys/60606-il-charles-romaker-1093252.html?cm_mmc=Avvo-_-Avvo_Badge-_-Micro-_-1093252" rel="me"><img id="avvo_badge" src="http://www.avvo.com/assets/microbadge.png" alt="Avvo - Rate your Lawyer. Get Free Legal Advice."></a></p>
                 </li>
             </ul>

@@ -345,7 +345,7 @@ $(function () {
 $('.slider').bxSlider({
     auto: true,
     speed: 1000,
-    pause: 10000,
+    pause: 9000,
     touchEnabled: false,
     controls: false,
     onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {

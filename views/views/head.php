@@ -8,7 +8,7 @@ if (!defined('WEB'))
     <meta name="description" content="The Romaker Law Firm is dedicated the exclusive representation of plaintiffs and petitioners in all matters of workers' compensation, personal injury, and employment rights.">
     <meta name="author" content="Romaker Law Firm">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>ROMAKER | <?= $title; ?></title>
     <link rel="shortcut icon" href="<?= TEMPLATE_URL; ?>/images/favicon.png">
     <!-- Bootstrap -->
@@ -23,5 +23,27 @@ if (!defined('WEB'))
               <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
               <script src="<?= TEMPLATE_URL; ?>/js/respond.js"></script>
     <![endif]-->
+    <script>
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+
+
+        ga('create', 'UA-58517984-1', 'auto');
+
+        ga('send', 'pageview');
+    </script>
 
 </head>

@@ -51,13 +51,13 @@ Class sendemailController Extends baseController {
     protected function send_email() {
         $data = include SITE_DATA . '/contact/contact_info.php';
 
-        $headers = "From: " . strip_tags('no-reply@romakerlaw.com') . "\r\n";
+        $headers = "From: " . strip_tags('contact@romakerlaw.com') . "\r\n";
         $headers .= "Reply-To: " . strip_tags('no-reply@romakerlaw.com') . "\r\n";
         //$headers .= "CC: cpr@example.com\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-        $subject = 'From Romakerlaw.com ' . $this->email_info['subject'];
+        $subject = 'Romakerlaw.com ' . $this->email_info['subject'];
         $message = $data['header'];
         $message .= "\n<h4>NAME: " . $this->email_info['name'] . "<h4>";
         $message .= "\n<h4>EMAIL: " . $this->email_info['email'] . "<h4>";

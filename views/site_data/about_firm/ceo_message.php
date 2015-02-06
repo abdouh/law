@@ -12,4 +12,4 @@ $data['ceo_message'] = <<<HERE
 HERE;
 
 
-return $data;
+return array();

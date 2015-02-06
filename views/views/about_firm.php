@@ -22,15 +22,15 @@ if (!defined('WEB'))
                 </div>
             </div><!-- our-skill -->
 
-            <!-- ceo-message -->
+            <!-- ceo-message 
             <div class="col-lg-6 col-sm-6 col-sm-6 col-xs-12 wow fadeInRight">
                 <?= $about_firm['ceo_message']; ?>
             </div><!-- ceo-message -->
-        </div> 
-        <!-- row -->
+        <!--</div> 
+        <!-- row 
         <div class="row">
             <!-- about-tab -->
-            <div class="col-lg-6 col-sm-6 col-sm-6 col-xs-12 wow fadeInLeft">
+            <div class="col-lg-6 col-sm-6 col-sm-6 col-xs-12 wow fadeInRight"><!--class="col-lg-6 col-sm-6 col-sm-6 col-xs-12 wow fadeInLeft"-->
                 <div class="about-tab">
                     <ul class="nav nav-tabs" role="tablist" id="myTab">
                         <?= $about_firm['about_tabs']['list']; ?>
