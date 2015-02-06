@@ -31,7 +31,7 @@ if ($_GET['lang'] == 'es') {
 
         <? include 'attorneys.php'; ?>
 
-        <? //include 'testimonial.php'; ?>
+        <? include 'testimonial.php'; ?>
 
         <? //include 'news.php'; ?>
 

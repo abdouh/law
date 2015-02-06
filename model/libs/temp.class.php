@@ -126,7 +126,7 @@ HERE;
                         <!-- testimonial item -->
                         <div class="item :active">
                             <div class="col-sm-3">
-                                <div class="client-image">
+                                <div class="client-image" style="display:none;">
                                     <img src=":image" alt="Client">
                                 </div>
                             </div>
